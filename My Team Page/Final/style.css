@@ -1,1 +1,119 @@
-sd
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto Slab', serif;
+    height:95vh;
+    scroll-behavior: smooth;
+}
+header{
+    width:100%;
+}
+.sub-title-header{
+    margin:2% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 9%;
+    flex-flow:row wrap;
+}
+.sub-title{
+    font-size:2.5rem;
+    font-weight:bolder;
+    color:#333;
+    word-spacing: 1px;
+}
+.sub-footer-title{
+    padding:0 20px;
+}
+h4{
+    padding:25px 0;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color:#333;
+}
+.sub-p-title{
+    color:#333;
+    font-size:1rem;
+    font-weight: bolder;
+    line-height: 28px;
+    word-wrap: wrap;
+
+}
+.image-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:35px;
+    flex-wrap:wrap;
+    padding:0 8%;
+    margin:4% 0;
+    height:90vh;
+}
+img{
+    width:300px;
+    height:450px;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    top:0;
+}
+h3{
+    font-size:1.2rem;
+    font-weight: bolder;
+    color:#333;
+    margin:6px 0;
+    text-align: center;
+}
+.image-2{
+    transform:translateY(50%);
+}
+.image-5{
+    transform:translateY(50%);
+}
+@media screen and (max-width:768px) {
+
+    .sub-title-header{
+        margin:10px;
+        padding:10px;
+    }
+    .sub-title{
+        margin-left:15px;
+    }
+    .image-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap:15px;
+        flex-wrap:wrap;
+        padding:0 8%;
+        margin-top:35px;
+        flex-basis: 100%;
+    }
+    img{
+        width:160px;
+        height:350px;
+    }
+    .image-2{
+          transform:translateY(50%);
+    }
+    .image-3{
+        transform:translateY(20%);
+    }
+    
+    .image-4{
+        transform:translateY(50%);
+   }
+   .image-5{
+    transform:translateY(50%);
+   }
+  .image-6{
+    transform:translateY(80%);
+}
+}
