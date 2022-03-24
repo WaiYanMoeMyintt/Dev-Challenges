@@ -1,1 +1,104 @@
-sdf
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;500&display=swap');
+
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+    text-decoration:none;
+}
+body{
+    font-family: 'Mukta', sans-serif;
+    height:100vh;
+    padding:3% 4%;
+    /* background-color:rgb(224, 224, 224); */
+}
+.title{
+    font-size:1.3rem;
+    color:#000;
+    font-weight:900;
+    transition:color 0.6s ease-in;
+    position:relative;
+    left:9%;
+}
+.title:hover{
+    color:#6969fd;
+}
+.parent-container{
+    width:100%;
+    height:auto;
+    display:flex;
+    column-gap:30px;
+    flex-grow:2;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:10%;
+    position:relative;
+    top:0;
+}
+.item-container{
+    display:block;
+    margin-right:5%;
+}
+.item-container h3 {
+    font-family: 'Mukta', sans-serif;
+    font-size:2.5rem;
+    color:#000000;
+    font-weight:800;
+    word-spacing:10px;
+    word-break:wrap;
+}
+.item-container p {
+    font-size:1.2rem;
+    color:#333;
+    font-weight:500;
+    word-spacing:8px;
+    letter-spacing:2px;
+    margin-top:15px;
+    opacity:0.8;
+    word-break: wrap;
+}
+.home-page-btn{
+    padding:8px 35px;
+    color:#fff;
+    font-size:1.2rem;
+    font-weight:500;
+    border:none;
+    border-radius:4px;
+    background-color:rgb(80, 80, 80);
+    cursor:pointer;
+    position:relative;
+    top:20%;
+    letter-spacing:1px;
+    transition:background-color 0.5s ease;
+}
+.home-page-btn:hover{
+    background-color:rgb(109, 108, 108);
+}
+.image{
+    max-width:350px;
+    height:auto;
+    margin-right:17%;
+}
+
+@media only screen and (max-width:768px)
+{
+    .title{
+        position:relative;
+        left:10px;
+    }
+    body{
+        display:flex;
+        justify-content:center;
+        padding:0 4%;
+    }
+    .image{
+        max-width:250px;
+        height:auto;
+        text-align:center;
+    }
+    .item-container h3 {
+          margin-top:15px;
+    }
+}
