@@ -7,14 +7,18 @@
    list-style-type: none;
    text-decoration: none;
 }
+html{
+   scroll-behavior: smooth;
+}
 body{
    font-family: 'Roboto', sans-serif;
    height: 125vh;
    width:100%;
-   padding:.5% 7%;
+   /* padding:.5% 7%; */
    user-select: auto;
    background-color: #000;
    overflow-x: hidden;
+   scroll-behavior: smooth;
 }
 /* navigation bar start */
 nav{
@@ -27,7 +31,7 @@ nav{
    top:0;
    z-index: 10;
    margin-top:8px;
-   padding:15px 0;
+   padding:15px 30px;
 }
 nav .navbar-title a {
    display: inline-block;
@@ -42,18 +46,18 @@ nav .navbar-title a {
    user-select: none;
    outline: none;
 }
-nav .navbar-section ul {
+.navbar-links  {
    position: relative;
-   right:5%;
+   right: 5%;
    display: flex;
-   justify-content: space-between;
+   justify-content:flex-end;
    column-gap:40px;
    flex-wrap: wrap;
    flex-direction: row;
    align-items: center;
    flex:1;
 }
-nav .navbar-section ul li a {
+.navbar-links  li a{
    text-decoration: none;
    display: inline-block;
    color:#fff;
@@ -62,11 +66,11 @@ nav .navbar-section ul li a {
    letter-spacing: .5px;
    transition: all 1s ease-in;
 }
-.navbar-section ul li a:hover{
+.navbar-links  li a:hover{
    text-decoration: underline;
    color:#fff;
 }
-.navbar-section ul li a:active{
+.navbar-links  li a:active{
    color: rgb(230, 230, 230);
 }
 
@@ -82,6 +86,7 @@ main{
    gap:auto;
    user-select: auto;
    flex-flow:row wrap;
+   padding:.5% 7%;
 }
 main .section-header{
    margin-bottom: 8%;
@@ -124,7 +129,7 @@ main .section-header .section-link a {
 }
 main .section-header .section-link a i {
    font-size: 1rem;
-   margin:0 5px;
+   margin:0 15px;
 }
 /* main section end */
 
@@ -182,4 +187,77 @@ footer{
 }
 footer span ,a {
    color: rgb(231, 231, 231);
+}
+.humburger{
+   display: none;
+   cursor: pointer;
+}
+.humburger .bar{
+   display: block;
+   width: 25px;
+   height: 3px;
+   margin: 3px 1px;
+   background-color: #fff;
+}
+
+/* medium screen devices */
+@media only screen and (max-width:768px) {
+   body{
+      overflow-x:auto;
+   }
+   nav{
+      display: flex;
+      position: relative;
+      top: 0;
+   }
+   .navbar-links{
+      display: flex;
+      background-color: rgb(5, 4, 4);
+      flex-direction: column;
+      justify-content: center;
+      gap:25px;
+      text-align: center;
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 30px;
+      left: 4px;
+      padding: 40px 80px;
+      margin:0 10px;
+      border-radius: 3px;
+      transform: translateY(-150%);
+      transition: transform .6s ease;
+   }
+   .navbar-links.active{
+      transform: translateY(0px);
+   }
+   .humburger{
+      display: block;
+   }
+   .humburger.active .bar:nth-child(2){
+      opacity: 0;
+   }
+   .humburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+      transition: transform .3s ease;
+   }
+   .humburger.active .bar:nth-child(3){
+      transform: translateY(-4px) rotate(-45deg);
+      transition: transform .3s ease;
+   }
+   main{
+      width: 100%;
+      transform: translateY(-20%);
+   }
+   .subsection-header a img{
+      width: 400px;
+      border-radius: 3px;
+   }
+   .profile-card-container{
+      position: relative;
+      right: 8px;
+      background-color: rgb(5, 5, 5);
+      border-radius: 3px;
+      padding: 40px 0;
+   }
 }
